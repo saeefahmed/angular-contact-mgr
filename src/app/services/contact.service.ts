@@ -18,7 +18,7 @@ export class ContactService {
 
   //Get Single Contact
   public getContact(contactId: string):Observable<IContact>{
-    let dataURL : string = `{this.serverUrl}/contacts/${contactId}`;
+    let dataURL : string = `${this.serverUrl}/contacts/${contactId}`;
     return this.httpClient.get<IContact>(dataURL).pipe(catchError(this.handleError));
   }
 
